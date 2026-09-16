@@ -10,7 +10,7 @@ A compact, real-life, multilingual German bootcamp for an Uzbek/Russian/English-
 - **Real-life German:** work, travel, meetings, shopping, housing, media, debates, presentations
 - **UZ / RU / EN bridges:** grammar is connected to languages you already know
 - **Memory hooks:** visual/emoji mnemonics instead of dry rules
-- **180 high-utility words/chunks** with Uzbek, Russian, English and German examples
+- **Curated multilingual starter deck** with Uzbek, Russian, English and German examples; designed to grow from real lesson input
 - **Speaking + writing + listening + reading** every day
 - **Daily quiz** and retrieval practice
 - **Spaced repetition:** 1 → 3 → 7 → 14 day review loop
@@ -87,6 +87,14 @@ A word is not considered “learned” until you can use it in a sentence **with
 └── scripts/
     └── validate.mjs        # sanity checks for course data
 ```
+
+## Quality check
+
+```bash
+npm test
+```
+
+Every push to `main` validates the curriculum and deploys the static app to GitHub Pages. In repository settings, choose **Settings → Pages → Source: GitHub Actions** once if Pages is not enabled yet.
 
 ## Source philosophy
 

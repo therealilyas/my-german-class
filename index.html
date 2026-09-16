@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#121826">
+  <title>DeutschSprint — A1 dan B2 gacha</title>
+  <meta name="description" content="O‘zbek, rus va ingliz tillari orqali 30 kunlik intensiv nemis tili kursi.">
+  <link rel="manifest" href="manifest.json"><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="flag">DE</span><span>DeutschSprint</span></a>
+    <nav aria-label="Asosiy navigatsiya">
+      <button class="nav active" data-view="learn">Darslar</button><button class="nav" data-view="cards">Kartalar</button><button class="nav" data-view="resources">Manbalar</button>
+    </nav>
+    <button id="theme" class="icon" aria-label="Rang rejimini almashtirish">◐</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">30 KUNLIK INTENSIV · A1 → B2</p><h1>Nemis tilini <em>ishlatib</em> o‘rgan.</h1><p>Har kuni bitta real vaziyat, bitta asosiy grammatika va majburiy gapirish. Nazariya — faqat amaliyotga xizmat qiladi.</p></div>
+      <div class="progress-card"><div class="ring" id="ring"><strong id="progressNumber">0%</strong></div><div><small>UMUMIY PROGRESS</small><b id="streak">0 kunlik seriya</b><span id="completedCount">0 / 30 dars</span></div></div>
+    </section>
+
+    <section id="learnView" class="view active">
+      <div class="level-tabs" id="levelTabs"></div>
+      <div class="workspace">
+        <aside><div class="aside-head"><b>30 kunlik yo‘l</b><span id="levelLabel"></span></div><div id="lessonList" class="lesson-list"></div></aside>
+        <article id="lesson" class="lesson"></article>
+      </div>
+    </section>
+
+    <section id="cardsView" class="view panel">
+      <div class="section-head"><div><p class="eyebrow">ACTIVE RECALL</p><h2>Ko‘p tilli flashcards</h2></div><div class="filters"><select id="cardLevel" aria-label="Daraja"><option value="all">Barcha daraja</option><option>A1</option><option>A2</option><option>B1</option><option>B2</option></select><button id="shuffle">Aralashtir</button></div></div>
+      <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Javobni ochish"></div>
+      <div class="card-actions"><button id="prevCard">←</button><button id="speakCard">🔊 Eshitish</button><button id="flipCard">Javob</button><button id="nextCard">→</button></div>
+    </section>
+
+    <section id="resourcesView" class="view panel"><div class="section-head"><div><p class="eyebrow">IMMERSION KIT</p><h2>Tekshirilgan manbalar</h2></div></div><div id="resourceGrid" class="resource-grid"></div></section>
+  </main>
+  <div class="timer"><span id="timerText">25:00</span><button id="timerToggle">Fokusni boshlash</button><button id="timerReset" aria-label="Taymerni tiklash">↻</button></div>
+  <template id="quizTemplate"><div class="quiz"><p class="quiz-count"></p><h3 class="quiz-q"></h3><div class="quiz-options"></div><p class="quiz-feedback"></p></div></template>
+  <script src="data/course.js"></script><script src="data/vocab.js"></script><script src="app.js"></script>
+</body>
+</html>
